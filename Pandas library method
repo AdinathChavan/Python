@@ -1,0 +1,14 @@
+import pandas as pd
+#readint csv file
+df = pd.read_csv("sales_data_sample.csv", encoding="latin1")
+
+#reading json file
+dj = pd.read_json("sample_Data.json")
+
+#print(dj.describe())
+
+#print(dj.info())
+
+print("Shape:", dj.shape)
+
+print("Column Names:",dj.columns)
