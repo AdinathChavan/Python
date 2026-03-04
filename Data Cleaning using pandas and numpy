@@ -1,0 +1,19 @@
+import pandas as pd
+import numpy as np
+
+data = pd.read_csv("C:/Users/Adinath Chavan/OneDrive/Desktop/Python/Pandas/sales_data_sample.csv", encoding="latin1")
+
+
+data["ADDRESSLINE1"]=data["ADDRESSLINE1"].ffill()
+
+print(data.isnull().sum())
+
+data["STATE"]=data["STATE"].bfill()
+
+data["POSTALCODE"]=data["POSTALCODE"].ffill()
+
+data["TERRITORY"]=data["TERRITORY"].bfill()
+
+data.to_csv("Cleaned_Data.csv")
+
+print(data.shape)
